@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alkalami&family=Amiri+Quran&family=Amiri:ital@0;1&family=Aref+Ruqaa:wght@400;700&family=DM+Serif+Text:ital@0;1&family=Gulzar&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Kdam+Thmor+Pro&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&family=Lemonada:wght@300;400;500;600&family=Manrope:wght@200;300;400;500;600&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Playpen+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Rakkas&family=Readex+Pro:wght@200;300;400;500;600&family=Reem+Kufi+Ink&family=Reem+Kufi:wght@400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Ubuntu:ital,wght@0,300;0,400;1,300&family=Vazirmatn:wght@100;200;300;400;500;600&family=Whisper&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D6EFD;
+}
+
+.wrapper {
+    width: 720px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.wrapper header {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.wrapper form {
+    margin: 35px 30px
+}
+
+form .dbl-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.dbl-field .field {
+    height: 50px;
+    width: calc(100% / 2 - 13px);
+    position: relative;
+}
+
+form .field input,
+form .message textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px 0 48px;
+    border: 1px solid #bfbfbf;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+form .field input:focus,
+form .message textarea:focus {
+    border: 2px solid #0D6EFD;
+}
+
+form .field input:focus~i,
+form .message textarea:focus~i {
+    color: #0D6EFD
+}
+
+form .message {
+    position: relative;
+}
+
+form .message i {
+    top: 30px !important;
+    font-size: 22px;
+}
+
+form .field input::placeholder,
+form .message textarea::placeholder {
+    color: #bfbfbf
+}
+
+.wrapper form i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    pointer-events: none;
+    color: #bfbfbf;
+}
+
+form .message textarea {
+    min-height: 120px;
+    max-height: 230px;
+    padding: 15px 20px 0 48px;
+    resize: vertical;
+}
+
+form .button-area {
+    margin: 25px 0;
+}
+
+.button-area button {
+    padding: 13px 25px;
+    font-size: 18px;
+    border: none;
+    background-color: #0D6EFD;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-area span {
+    color: #0D6EFD;
+    margin-left: 30px;
+    display: none;
+}
+
+
+
+@media(max-width: 600px) {
+    .wrapper header {
+        text-align: center;
+    }
+
+
+    form .dbl-field {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .dbl-field .field {
+        width: 100%;
+    }
+
+    form .button-area {
+        flex-direction: column;
+    }
+
+    .button-area button {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .button-area span {
+        display: inline-block;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+}
